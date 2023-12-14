@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Login</h1>
+    <div style="color: red; margin: 1rem;">
+        {% if errors %}
+            
+            {% for error in errors %}
+                <li><b>{{error.loc[0]}}</b>: {{error.msg}}</li>
+            {% endfor %}
+
+        {% endif %}
+    </div>
+
+    <form action="" method="post">
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="text" name="password">
+        </div>
+        <input type="submit">
+    </form>
+
+{% endblock content %}

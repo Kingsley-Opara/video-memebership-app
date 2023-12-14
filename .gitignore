@@ -1,0 +1,5 @@
+venv
+virtual
+__pycache__
+*/connect_db/**
+.env

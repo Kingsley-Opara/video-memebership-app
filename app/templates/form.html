@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Login</h1>
+
+    <form action="" method="post">
+        {% if error_str %}
+            <h5>{{error_str}}</h5>
+        {% endif %}
+        {% if errors %}
+            {% for error in errors %}
+                <h5>{{error}}</h5>
+            {% endfor %}
+        {% endif %}
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="text" name="password">
+        </div>
+        <input type="submit">
+    </form>
+
+{% endblock content %}
