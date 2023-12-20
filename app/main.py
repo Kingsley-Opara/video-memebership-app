@@ -29,8 +29,7 @@ def on_startup():
     get_session()
     session = get_session()
     sync_table(User)
-    row = session.execute("select release_version from system.local").one()
-    if row:
+    if row := session.execute("select release_version from system.local").one():
         print('nice one')
     else:
         print("An error occurred.")
